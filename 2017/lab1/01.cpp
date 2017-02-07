@@ -12,7 +12,7 @@ int main()
 	std::cout << "let's scan data" << std::endl;
 
 	int num = 0;
-	std::cout << "enter a numder" << std::endl;
+	std::cout << "enter a number" << std::endl;
 	std::cin >> num;
 	std::cout << "num = " << num << std::endl;
 
