@@ -3,139 +3,139 @@ class TString
 {
 	char * Data;
 public:
-	/// <summary> Деструктор </summary> 
+	/// <summary> Р”РµСЃС‚СЂСѓРєС‚РѕСЂ </summary> 
 	~TString();
 
 
-	/// <summary> Конструктор по умолчанию </summary>  
+	/// <summary> РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ </summary>  
 	TString();
 
 
-	/// <summary> Конструктор копирования </summary>  
-	/// <param name="rhs">Объект, который копируем </param>  
+	/// <summary> РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ </summary>  
+	/// <param name="rhs">РћР±СЉРµРєС‚, РєРѕС‚РѕСЂС‹Р№ РєРѕРїРёСЂСѓРµРј </param>  
 	TString(const TString& rhs);
 
 
-	/// <summary> Пользовательский конструктор </summary>  
-	/// <param name="data">Данные, которые требуется поместить в создаваемый объект </param>  
+	/// <summary> РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёР№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ </summary>  
+	/// <param name="data">Р”Р°РЅРЅС‹Рµ, РєРѕС‚РѕСЂС‹Рµ С‚СЂРµР±СѓРµС‚СЃСЏ РїРѕРјРµСЃС‚РёС‚СЊ РІ СЃРѕР·РґР°РІР°РµРјС‹Р№ РѕР±СЉРµРєС‚ </param>  
 	TString(const char * data);
 
 
-	/// <summary> Оператор присваивания </summary>  
-	/// <param name="data">Объект, который копируем </param>  
-	/// <returns>Возвращаем ссылку на себя</returns>  
+	/// <summary> РћРїРµСЂР°С‚РѕСЂ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ </summary>  
+	/// <param name="data">РћР±СЉРµРєС‚, РєРѕС‚РѕСЂС‹Р№ РєРѕРїРёСЂСѓРµРј </param>  
+	/// <returns>Р’РѕР·РІСЂР°С‰Р°РµРј СЃСЃС‹Р»РєСѓ РЅР° СЃРµР±СЏ</returns>  
 	TString& operator =(const TString& rhs);
 
 
-	/// <summary> Оператор += </summary>  
-	/// <param name="rhs">Объект, который стоит после знака '+=' </param>  
-	/// <returns>Возвращаем ссылку на себя</returns>  
+	/// <summary> РћРїРµСЂР°С‚РѕСЂ += </summary>  
+	/// <param name="rhs">РћР±СЉРµРєС‚, РєРѕС‚РѕСЂС‹Р№ СЃС‚РѕРёС‚ РїРѕСЃР»Рµ Р·РЅР°РєР° '+=' </param>  
+	/// <returns>Р’РѕР·РІСЂР°С‰Р°РµРј СЃСЃС‹Р»РєСѓ РЅР° СЃРµР±СЏ</returns>  
 	TString& operator +=(const TString& rhs);
 
 
-	/// <summary> Оператор == </summary>  
-	/// <param name="rhs">Объект, который стоит после знака '==' </param>  
-	/// <returns>Возвращаем значения равенства двух строк</returns>  
+	/// <summary> РћРїРµСЂР°С‚РѕСЂ == </summary>  
+	/// <param name="rhs">РћР±СЉРµРєС‚, РєРѕС‚РѕСЂС‹Р№ СЃС‚РѕРёС‚ РїРѕСЃР»Рµ Р·РЅР°РєР° '==' </param>  
+	/// <returns>Р’РѕР·РІСЂР°С‰Р°РµРј Р·РЅР°С‡РµРЅРёСЏ СЂР°РІРµРЅСЃС‚РІР° РґРІСѓС… СЃС‚СЂРѕРє</returns>  
 	bool operator ==(const TString& rhs) const;
 
 
-	/// <summary> Оператор &lt; </summary>  
-	/// <param name="rhs">Объект, который стоит после знака "&lt;" </param>  
-	/// <returns>Возвращаем значения сравнения двух строк</returns>  
+	/// <summary> РћРїРµСЂР°С‚РѕСЂ &lt; </summary>  
+	/// <param name="rhs">РћР±СЉРµРєС‚, РєРѕС‚РѕСЂС‹Р№ СЃС‚РѕРёС‚ РїРѕСЃР»Рµ Р·РЅР°РєР° "&lt;" </param>  
+	/// <returns>Р’РѕР·РІСЂР°С‰Р°РµРј Р·РЅР°С‡РµРЅРёСЏ СЃСЂР°РІРЅРµРЅРёСЏ РґРІСѓС… СЃС‚СЂРѕРє</returns>  
 	bool operator <(const TString& rhs) const;
 
 
-	/// <summary> Функция поиска подстроки</summary>  
-	/// <param name="substr">Подстрока, которую необходимо найти </param>  
-	/// <returns>Возвращаем позицию substr. Если подстрока не найдена, то возвратить -1</returns> 
+	/// <summary> Р¤СѓРЅРєС†РёСЏ РїРѕРёСЃРєР° РїРѕРґСЃС‚СЂРѕРєРё</summary>  
+	/// <param name="substr">РџРѕРґСЃС‚СЂРѕРєР°, РєРѕС‚РѕСЂСѓСЋ РЅРµРѕР±С…РѕРґРёРјРѕ РЅР°Р№С‚Рё </param>  
+	/// <returns>Р’РѕР·РІСЂР°С‰Р°РµРј РїРѕР·РёС†РёСЋ substr. Р•СЃР»Рё РїРѕРґСЃС‚СЂРѕРєР° РЅРµ РЅР°Р№РґРµРЅР°, С‚Рѕ РІРѕР·РІСЂР°С‚РёС‚СЊ -1</returns> 
 	size_t Find(const TString& substr) const;
 
 
-	/// <summary> Функция замены букв </summary>  
-	/// <param name="oldSymbol">Символ, который требуется заменить </param>  
-	/// <param name="newSymbol">Символ, на который требуется заменить </param>
+	/// <summary> Р¤СѓРЅРєС†РёСЏ Р·Р°РјРµРЅС‹ Р±СѓРєРІ </summary>  
+	/// <param name="oldSymbol">РЎРёРјРІРѕР», РєРѕС‚РѕСЂС‹Р№ С‚СЂРµР±СѓРµС‚СЃСЏ Р·Р°РјРµРЅРёС‚СЊ </param>  
+	/// <param name="newSymbol">РЎРёРјРІРѕР», РЅР° РєРѕС‚РѕСЂС‹Р№ С‚СЂРµР±СѓРµС‚СЃСЏ Р·Р°РјРµРЅРёС‚СЊ </param>
 	void Replace(char oldSymbol, char newSymbol);
 
 
-	/// <summary> Функция возвращает длину строки </summary>  
-	/// <returns>Возвращаем длину строки</returns> 
+	/// <summary> Р¤СѓРЅРєС†РёСЏ РІРѕР·РІСЂР°С‰Р°РµС‚ РґР»РёРЅСѓ СЃС‚СЂРѕРєРё </summary>  
+	/// <returns>Р’РѕР·РІСЂР°С‰Р°РµРј РґР»РёРЅСѓ СЃС‚СЂРѕРєРё</returns> 
 	size_t Size() const;
 
 
-	/// <summary> Функция для определения пуста ли строка </summary>  
+	/// <summary> Р¤СѓРЅРєС†РёСЏ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РїСѓСЃС‚Р° Р»Рё СЃС‚СЂРѕРєР° </summary>  
 	bool Empty() const;
 
 
-	/// <summary> Оператор [] </summary> 
+	/// <summary> РћРїРµСЂР°С‚РѕСЂ [] </summary> 
 	/// <example> 
 	/// <code>
 	/// TString str = "some string";
 	/// char symbol = str[2]; // symbol == 'm'
 	/// </code>
 	/// </example>
-	/// <param name="index"> Индекс символа </param>  
-	/// <returns> Значение символа в строке с индексом index</returns> 
+	/// <param name="index"> РРЅРґРµРєСЃ СЃРёРјРІРѕР»Р° </param>  
+	/// <returns> Р—РЅР°С‡РµРЅРёРµ СЃРёРјРІРѕР»Р° РІ СЃС‚СЂРѕРєРµ СЃ РёРЅРґРµРєСЃРѕРј index</returns> 
 	char operator[](size_t index) const;
 
 
-	/// <summary> Оператор [] </summary> 
+	/// <summary> РћРїРµСЂР°С‚РѕСЂ [] </summary> 
 	/// <example> 
 	/// <code>
 	/// TString str = "some string";
-	/// str[0] = 'S'; // теперь переменная str равна "Some string"
+	/// str[0] = 'S'; // С‚РµРїРµСЂСЊ РїРµСЂРµРјРµРЅРЅР°СЏ str СЂР°РІРЅР° "Some string"
 	/// </code>
 	/// </example>
-	/// <param name="index"> Индекс символа </param>  
-	/// <returns> Ссылка на символ в строке с индексом index</returns> 
+	/// <param name="index"> РРЅРґРµРєСЃ СЃРёРјРІРѕР»Р° </param>  
+	/// <returns> РЎСЃС‹Р»РєР° РЅР° СЃРёРјРІРѕР» РІ СЃС‚СЂРѕРєРµ СЃ РёРЅРґРµРєСЃРѕРј index</returns> 
 	char& operator[](size_t index);
 
 
-	/// <summary> Смотри пример </summary> 
+	/// <summary> РЎРјРѕС‚СЂРё РїСЂРёРјРµСЂ </summary> 
 	/// <example> 
 	/// <code>
 	/// TString str = "___some string___";
-	/// str.RTrim('_'); // теперь переменная str равна "___some string"
+	/// str.RTrim('_'); // С‚РµРїРµСЂСЊ РїРµСЂРµРјРµРЅРЅР°СЏ str СЂР°РІРЅР° "___some string"
 	/// </code>
 	/// </example>
-	/// <param name="symbol"> Значение символов, которе отрезаем </param> 
+	/// <param name="symbol"> Р—РЅР°С‡РµРЅРёРµ СЃРёРјРІРѕР»РѕРІ, РєРѕС‚РѕСЂРµ РѕС‚СЂРµР·Р°РµРј </param> 
 	void RTrim(char symbol);
 
 
-	/// <summary> Смотри пример </summary> 
+	/// <summary> РЎРјРѕС‚СЂРё РїСЂРёРјРµСЂ </summary> 
 	/// <example> 
 	/// <code>
 	/// TString str = "___some string___";
-	/// str.LTrim('_'); // теперь переменная str равна "some string___"
+	/// str.LTrim('_'); // С‚РµРїРµСЂСЊ РїРµСЂРµРјРµРЅРЅР°СЏ str СЂР°РІРЅР° "some string___"
 	/// </code>
 	/// </example>
-	/// <param name="symbol"> Значение символов, которе отрезаем </param> 
+	/// <param name="symbol"> Р—РЅР°С‡РµРЅРёРµ СЃРёРјРІРѕР»РѕРІ, РєРѕС‚РѕСЂРµ РѕС‚СЂРµР·Р°РµРј </param> 
 	void LTrim(char symbol);
 
 	friend std::ostream & operator<<(std::ostream &, const TString &);
 };
 
-/// <summary> Оператор +</summary>  
+/// <summary> РћРїРµСЂР°С‚РѕСЂ +</summary>  
 /// <example> 
 /// <code>
 /// TString a = "Hello";
 /// TString b = "World";
-/// TString c = a + b; // c равна "HelloWorld"
+/// TString c = a + b; // c СЂР°РІРЅР° "HelloWorld"
 /// </code>
 /// </example>
-/// <returns>Возвращаем строку равную a + b</returns>  
+/// <returns>Р’РѕР·РІСЂР°С‰Р°РµРј СЃС‚СЂРѕРєСѓ СЂР°РІРЅСѓСЋ a + b</returns>  
 TString operator+(const TString & a, const TString & b);
 
 
-/// <summary> Оператор !=</summary>
+/// <summary> РћРїРµСЂР°С‚РѕСЂ !=</summary>
 bool operator!=(const TString & a, const TString & b);
 
 
-/// <summary> Оператор &gt;</summary>
+/// <summary> РћРїРµСЂР°С‚РѕСЂ &gt;</summary>
 bool operator>(const TString & a, const TString & b);
 
 
-/// <summary> Оператор вывода </summary>  
-/// <param name="out">Поток куда выводим строку </param>  
-/// <param name="str">Строка, которую выводим </param>
-/// <returns>Возвращаем ссылку на поток</returns> 
+/// <summary> РћРїРµСЂР°С‚РѕСЂ РІС‹РІРѕРґР° </summary>  
+/// <param name="out">РџРѕС‚РѕРє РєСѓРґР° РІС‹РІРѕРґРёРј СЃС‚СЂРѕРєСѓ </param>  
+/// <param name="str">РЎС‚СЂРѕРєР°, РєРѕС‚РѕСЂСѓСЋ РІС‹РІРѕРґРёРј </param>
+/// <returns>Р’РѕР·РІСЂР°С‰Р°РµРј СЃСЃС‹Р»РєСѓ РЅР° РїРѕС‚РѕРє</returns> 
 std::ostream & operator<<(std::ostream &out, const TString &str);
