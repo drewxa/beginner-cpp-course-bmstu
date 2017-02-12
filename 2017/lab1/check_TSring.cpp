@@ -33,22 +33,23 @@ int main()
 	assert(str2 == " tr tr tr123");
 	
 
+	size_t found = str2.Find("tr12");
+	assert(found == 7);
+	found = str2.Find("uuuuuu"); // not found, returns -1
+	assert(found == -1);
+
+
 	str2.LTrim(' ');
 	assert(str2 == "tr tr tr123");
 	str2.RTrim('3');
 	assert(str2 == "tr tr tr12");
-
-	size_t found = str2.Find("tr123");
-	assert(found == 7);
-	found = str2.Find("uuuuuu"); // not found, returns -1
-	assert(found == -1);
 
 
 	assert(str0 != str2);
 	assert(str0 != "tr tr tr12");
 
 	bool f1 = str != str2;
-	assert(!f1);
+	assert(f1);
 
 	bool f2 = str < str2;
 	bool f3 = str > str2;
