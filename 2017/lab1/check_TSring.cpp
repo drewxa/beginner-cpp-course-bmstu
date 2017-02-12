@@ -20,30 +20,32 @@ int main()
 	TString str2 = str + str;
 	str2 += str;
 	str2 += "123";
-	assert(str2 == "strstrsrt123");
+	assert(str2 == "strstrstr123");
 
 
 	str0 = str2;
-	assert(str0 == "strstrsrt123");
+	assert(str0 == "strstrstr123");
 	assert(str0 == str2);
 	str0 = str0;
 	assert(str0 == str2);
 
 	str2.Replace('s', ' ');
-	assert(str2 == " tr tr rt123");
+	assert(str2 == " tr tr tr123");
 	
-	size_t found = str2.Find("rt123");
+
+	str2.LTrim(' ');
+	assert(str2 == "tr tr tr123");
+	str2.RTrim('3');
+	assert(str2 == "tr tr tr12");
+
+	size_t found = str2.Find("tr123");
 	assert(found == 7);
 	found = str2.Find("uuuuuu"); // not found, returns -1
 	assert(found == -1);
 
-	str2.LTrim(' ');
-	assert(str2 == "tr tr rt123");
-	str2.RTrim('3');
-	assert(str2 == "tr tr rt12");
 
 	assert(str0 != str2);
-	assert(str0 != "tr tr rt12");
+	assert(str0 != "tr tr tr12");
 
 	bool f1 = str != str2;
 	assert(!f1);
