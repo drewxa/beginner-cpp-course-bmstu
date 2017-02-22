@@ -12,11 +12,11 @@ public:
 
 	virtual void Live(float time) override
 	{
-		// с 6 до 7 кот ест
+		// СЃ 6 РґРѕ 7 РєРѕС‚ РµСЃС‚
 		if (time >= 6.f && time <= 7.f)
 			std::cout << GetName() << " is eating" << std::endl;
 
-		// остальное время спит
+		// РѕСЃС‚Р°Р»СЊРЅРѕРµ РІСЂРµРјСЏ СЃРїРёС‚
 		else
 			std::cout << GetName() << " is sleeping" << std::endl;
 	}
@@ -32,13 +32,13 @@ public:
 
 	virtual void Live(float time) override
 	{
-		// с 6 до 7 кот в сапогах ест
+		// СЃ 6 РґРѕ 7 РєРѕС‚ РІ СЃР°РїРѕРіР°С… РµСЃС‚
 		if (time >= 6.f && time <= 7.f)
 			std::cout << GetName() << " is eating" << std::endl;
-		// с 8 до 15 кот в сапогах спит
+		// СЃ 8 РґРѕ 15 РєРѕС‚ РІ СЃР°РїРѕРіР°С… СЃРїРёС‚
 		else if (time >= 8.f && time <= 15.f)
 			std::cout << GetName() << " is sleeping" << std::endl;
-		// остальное время бежит
+		// РѕСЃС‚Р°Р»СЊРЅРѕРµ РІСЂРµРјСЏ Р±РµР¶РёС‚
 		else
 			std::cout << GetName() << " is running" << std::endl;
 	}
@@ -52,13 +52,13 @@ int main()
 	TAnimal * catCalledGav = new TCat("Gav");
 	TAnimal * pussBoots = new TPussInBoots();
 
-	// если не удалось добавить, то очищаем память
+	// РµСЃР»Рё РЅРµ СѓРґР°Р»РѕСЃСЊ РґРѕР±Р°РІРёС‚СЊ, С‚Рѕ РѕС‡РёС‰Р°РµРј РїР°РјСЏС‚СЊ
 	if (!myZoo.AddNewAnimal(&myCat))
 		delete myCat;
-	// если не удалось добавить, то очищаем память
+	// РµСЃР»Рё РЅРµ СѓРґР°Р»РѕСЃСЊ РґРѕР±Р°РІРёС‚СЊ, С‚Рѕ РѕС‡РёС‰Р°РµРј РїР°РјСЏС‚СЊ
 	if (!myZoo.AddNewAnimal(&catCalledGav))
 		delete catCalledGav;
-	// если не удалось добавить, то очищаем память
+	// РµСЃР»Рё РЅРµ СѓРґР°Р»РѕСЃСЊ РґРѕР±Р°РІРёС‚СЊ, С‚Рѕ РѕС‡РёС‰Р°РµРј РїР°РјСЏС‚СЊ
 	if (!myZoo.AddNewAnimal(&pussBoots))
 		delete pussBoots;
 
@@ -67,7 +67,7 @@ int main()
 		myZoo.Work();
 		std::cout << std::endl;
 
-		// поток ждет 1 секунду
+		// РїРѕС‚РѕРє Р¶РґРµС‚ 1 СЃРµРєСѓРЅРґСѓ
 		std::this_thread::sleep_for(std::chrono::seconds(1));
 	}
 	system("pause");
