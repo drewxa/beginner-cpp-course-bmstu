@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 
+
 class TAnimal
 {
 	std::string Name;
@@ -10,12 +11,12 @@ public:
 	TAnimal();
 	TAnimal(const std::string & name);
 
-	/// Используем деструктор по умолчанию.
-	/// т.к. специальных действия для очистки объектов не требуется
+	/// РСЃРїРѕР»СЊР·СѓРµРј РґРµСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ.
+	/// С‚.Рє. СЃРїРµС†РёР°Р»СЊРЅС‹С… РґРµР№СЃС‚РІРёСЏ РґР»СЏ РѕС‡РёСЃС‚РєРё РѕР±СЉРµРєС‚РѕРІ РЅРµ С‚СЂРµР±СѓРµС‚СЃСЏ
 	virtual ~TAnimal() = default;
 
-	/// Абстрактный метод
-	/// <param name="time"> Время суток </param>
+	/// РђР±СЃС‚СЂР°РєС‚РЅС‹Р№ РјРµС‚РѕРґ
+	/// <param name="time"> Р’СЂРµРјСЏ СЃСѓС‚РѕРє </param>
 	virtual void Live(float time) = 0;
 
 	std::string GetName() const;
