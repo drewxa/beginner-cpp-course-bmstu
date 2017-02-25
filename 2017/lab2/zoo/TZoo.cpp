@@ -38,6 +38,7 @@ void TZoo::Work()
 	for (size_t i = 0; i < NumAnimals; ++i)
 	{
 		if (Animals[i] != nullptr)
+			// Демонстрация работы динамического полиморфизма
 			Animals[i]->Live(Time);
 	}
 	Time += STEP;
