@@ -35,6 +35,8 @@ public:
 	void Reset(TDummy * newPtr);
 
 	void swap(TDummyScopedPtr& rhs) throw();
+	
+	operator bool() const throw();
 
 	TDummyScopedPtr& operator=(const TDummyScopedPtr&) = delete;
 	TDummyScopedPtr(const TDummyScopedPtr&) = delete;
