@@ -60,105 +60,102 @@ public:
 
 	void reserve(size_type size)
 	{
-		// реализовать
+		// implement
 	}
 
 	TVector(const TVector& rhs)
 	{
-		// реализовать
+		// implement
 	}
 
 	TVector& operator=(const TVector& rhs)
 	{
-		// реализовать
+		// implement
 	}
 
-	// Добавляет элемент в массив
-	// Если не хватает памяти в Ptr, то выделяет новую
-	// Аналог std::vector::push_back
 	void push_back(const value_type& value)
 	{
-		// реализовать		
+		// implement		
 	}
 	
 	reference at(size_type index)
 	{
-		// реализовать	
+		// implement	
 	}
 
 	value_type at(size_type index) const
 	{
-		// реализовать	
+		// implement
 	}
 
 	reference operator[](size_type index)
 	{
-		// реализовать
+		// implement
 	}
 
 	const_reference operator[](size_type index) const
 	{
-		// реализовать
+		// implement
 	}
 
 	reference front()
 	{
-		// реализовать	
+		// implement	
 	}
 
 	const_reference front() const
 	{
-		// реализовать	
+		// implement	
 	}
 
 	reference back()
 	{
-		// реализовать	
+		// implement	
 	}
 
 	const_reference back() const
 	{
-		// реализовать	
+		// implement	
 	}
 
 	void clear()
 	{
-		// реализовать	
+		// implement	
 	}
 
 	void pop_back()
 	{
-		// реализовать
+		// implement
 	}
 
 	void swap(TVector& other) throw()
 	{
-		// реализовать
+		// implement
 	}
 
 	void resize(size_type count, value_type value = value_type())
 	{
-		// реализовать
+		// implement
 	}
 
 	iterator insert(iterator pos, const value_type& value)
 	{
-		// реализовать
+		// implement
 	}
 
 	void insert(iterator pos, size_type count, const value_type& value)
 	{
-		// реализовать
+		// implement
 	}
 
 	iterator erase(iterator pos)
 	{
-		// реализовать
+		// implement
 	}
 
 	iterator erase(iterator first, iterator last)
 	{
-		// реализовать
+		// implement
 	}
 };
 
