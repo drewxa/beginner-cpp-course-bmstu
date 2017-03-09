@@ -1,7 +1,7 @@
 # beginner-cpp-course-bmstu
 Second semester of course: Programming Languages
 
-Календарь занятий - https://calendar.yandex.ru/week?embed&private_token=5c43550c8adabc536b1947f1a5e36e452eca8adb&tz_id=Europe/Moscow
+[Календарь занятий](https://calendar.yandex.ru/week?embed&private_token=5c43550c8adabc536b1947f1a5e36e452eca8adb&tz_id=Europe/Moscow)
 
 ## Темы лабораторных
 1. ООП
