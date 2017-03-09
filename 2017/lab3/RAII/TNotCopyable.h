@@ -1,43 +1,55 @@
 #ifndef __NOTCOPYABLE_INCLUDED__
 #define __NOTCOPYABLE_INCLUDED__
 
-#include <allocators>
-#include <memory>
+#pragma warning(disable:4996)
+#include <exception>
+#include <cstdio>
+#include <string>
+
+struct FileAlreadyOpened
+	: public std::exception
+{
+	FileAlreadyOpened() = default;
+	FileAlreadyOpened(const char* const message)
+		: std::exception(message)
+	{ }
+};
+
 class TNotCopyable
 {
-	int * Memory;
-	const int Size = 10;
+	FILE * Descriptor;
 
-	std::allocator<int> Al; // default allocator for ints
-	void Init()
-	{
-		for (int i = 0; i < Size; ++i)
-		{
-			Memory[i] = rand();
-		}
-	}
 public:
 	TNotCopyable()
-		: Memory(nullptr)
+		: Descriptor(nullptr)
 	{ }
 
 	TNotCopyable(const TNotCopyable&) = delete;
 	TNotCopyable& operator = (const TNotCopyable&) = delete;
 
-	void Allocate()
+	void OpenToWrite(std::string const & fileName)
 	{
-		Memory = Al.allocate(Size); // space for 10 ints
-		Init();
+		if (Descriptor != nullptr)
+			throw FileAlreadyOpened();
+		Descriptor = fopen(fileName.c_str(), "w");
 	}
 
-	void Deallocate()
+	void OpenToRead(std::string const & fileName)
 	{
-		Al.deallocate(Memory, Size);
+		if (Descriptor != nullptr)
+			throw FileAlreadyOpened();
+		Descriptor = fopen(fileName.c_str(), "r");
 	}
 
-	int Get()
+	void Close() throw()
 	{
-		return Memory[rand() % Size];
+		if (Descriptor != nullptr)
+			fclose(Descriptor);
+	}
+
+	FILE * Get()
+	{
+		return Descriptor;
 	}
 };
 
