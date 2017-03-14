@@ -44,7 +44,10 @@ public:
 	void Close() throw()
 	{
 		if (Descriptor != nullptr)
+		{
 			fclose(Descriptor);
+			Descriptor = nullptr;
+		}
 	}
 
 	FILE * Get()
