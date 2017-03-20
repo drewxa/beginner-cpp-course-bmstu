@@ -56,22 +56,22 @@ public:
 	
 	boolean_function(const boolean_function& table);
 
-	boolean_function& opeartor=(const boolean_function& rhs);
+	boolean_function& operator=(const boolean_function& rhs);
 
 	// сложение по модулю 2
 	// если разное количество переменных - исключение
-	boolean_function& opeartor += (const boolean_function& rhs);
+	boolean_function& operator += (const boolean_function& rhs);
 
 	// конъюнкция
 	// если разное количество переменных - исключение
-	boolean_function& opeartor *= (const boolean_function& rhs);
+	boolean_function& operator *= (const boolean_function& rhs);
 
 	// дизъюнкция
 	// если разное количество переменных - исключение
-	boolean_function& opeartor |= (const boolean_function& rhs);
+	boolean_function& operator |= (const boolean_function& rhs);
 
 	// побитовое отрицание
-	boolean_function opeartor ~ () const;
+	boolean_function operator ~ ();
 
 	// true если функции равны
 	//  иначе false
