@@ -1,0 +1,1 @@
+﻿Реализуйте шаблонный `TScopedPtr`. Интерфейс класса в [TScopedPtr.h](TScopedPtr.h)
