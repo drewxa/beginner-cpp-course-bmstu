@@ -34,6 +34,8 @@ public:
 	// тождественная единица "от dimension переменных"
 	static boolean_function one(size_t dimension);
 	
+	static boolean_function from_anf(std::vector<value_type> v);
+	
 	boolean_function();
 	
 	// задает фунцию тождественного нуля от n переменных
@@ -120,7 +122,7 @@ public:
 	bool is_functionally_complete_system() const;
 	
 	// Возвращает АНФ функции
-	std::vector<bool> anf() const;
+	std::vector<value_type> anf() const;
 };
 
 // пусть boolean_function представляет из себя функцию "01110000"
