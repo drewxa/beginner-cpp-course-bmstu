@@ -1,0 +1,31 @@
+
+
+#Scheme
+"Name"
+"Group" 
+"City" 
+
+#Student1
+"Ivanov"
+"UI1"
+"Moscow" some string "but " not a value
+#Student 2
+"Petrov"
+"UI1" comment
+"Sochi" some "but " not a value
+
+#Tutor
+"Ivanov"
+""
+"Moscow" comment
+
+
+#Tutor1
+"Petrov"
+"UI1,412,BTM-132"
+""
+
+#Tutor 1
+"Petrov" some comment
+"--All--"
+"London"
