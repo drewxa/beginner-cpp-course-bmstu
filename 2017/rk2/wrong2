@@ -1,0 +1,14 @@
+#Scheme
+"Name"
+"Group" 
+"City" 
+
+#Student1
+"Ivanov"
+"UI1"
+"Moscow" some string "but " not a value
+
+#Student1
+"Petrov"
+"UI1" comment
+"Sochi" some "but " not a value
