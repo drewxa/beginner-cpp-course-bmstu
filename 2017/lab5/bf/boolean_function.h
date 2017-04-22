@@ -1,4 +1,4 @@
-﻿#ifndef __BOOLEAN_FUNCTION_INCLUDED__
+#ifndef __BOOLEAN_FUNCTION_INCLUDED__
 #define __BOOLEAN_FUNCTION_INCLUDED__
 
 #include <string>
@@ -9,8 +9,8 @@ class boolean_function
 public:
 	using value_type = bool;
 	using size_type = size_t;
-	using reference = value_type&;
-	using const_reference = const value_type&;
+	using reference = std::vector<value_type>::reference;
+	using const_reference = std::vector<value_type>::const_reference;
 
 	using iterator = typename std::vector<value_type>::iterator;
 	using const_iterator = typename std::vector<value_type>::const_iterator;
