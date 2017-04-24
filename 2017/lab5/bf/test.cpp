@@ -347,7 +347,8 @@ void test_op_more()
 	boolean_function f(14, 3);
 
 	assert(f >= boolean_function(14, 3));
-	assert(!(f >= boolean_function("00110000")));
+	assert(!(f >= boolean_function("11110000")));
+	assert((f >= boolean_function("00110000")));
 	try
 	{
 		f >= boolean_function("00110110");
@@ -388,7 +389,7 @@ void test_it_begin_end()
 	
 	for (auto & v : f)
 	{
-		assert(static_cast<bool>(v));
+		assert(static_cast<bool>(v) == false);
 	}
 }
 
