@@ -497,7 +497,7 @@ void test_const()
 
 void test_calc()
 {
-	boolean_function g("000101111");
+	boolean_function g("00010111");
 	assert(g({true, false, true}));
 	assert(g({true, true, true}));
 	assert(g({true, true, false}));
@@ -508,13 +508,13 @@ void test_calc()
 
 void test_combo()
 {
-	boolean_function G("000101111");
+	boolean_function G("00010111");
 
 	boolean_function x0 = boolean_function::var(0, 1);
 	boolean_function x1 = boolean_function::var(1, 2);
 	boolean_function y = boolean_function::var(2, 3);
-	boolean_function z0 = boolean_function::var(3, 3);
-	boolean_function z1 = boolean_function::var(4, 3);
+	boolean_function z0 = boolean_function::var(3, 4);
+	boolean_function z1 = boolean_function::var(4, 5);
 
 	boolean_function XOR("0110");
 	boolean_function AND("0001");
